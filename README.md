@@ -45,3 +45,21 @@ function myplugin_enqueue_script_admin() {
 	wp_enqueue_script( 'myplugin-admin', $src, array(), null, false );
 }
 ```
+
+```PHP
+// Admin Specific page
+add_action( 'admin_enqueue_scripts', 'myplugin_enqueue_style_admin_pages' );
+function myplugin_enqueue_style_admin_pages( $hook ) {
+
+  // wp_die( $hook );
+
+  if ( 'edit.php' === $hook ) {
+
+    $src = plugin_dir_url( __FILE__ ) .'admin/css/example-admin.css';
+
+    wp_enqueue_style( 'myplugin-admin-pages', $src, array(), null, 'all' );
+
+  }
+  
+}
+```
