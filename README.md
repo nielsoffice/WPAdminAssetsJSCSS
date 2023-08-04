@@ -66,6 +66,7 @@ function myplugin_enqueue_style_admin_pages( $hook ) {
 
 <br /> Also : 
 <br /> Admin inline script : https://developer.wordpress.org/reference/hooks/admin_print_scripts/
+<br /> Admin inline style: https://developer.wordpress.org/reference/hooks/admin_print_style/
 
 ```PHP
 function admin_inline_js(){ 
